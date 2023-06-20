@@ -1,0 +1,13 @@
+{
+  "name": "plotter-experiments",
+  "version": "1.0.0",
+  "description": "Experiments for my pen plotter",
+  "main": "index.js",
+  "repository": "git@github.com:Serchinastico/plotter-experiments.git",
+  "author": "Serchinastico",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "makerjs": "^0.18.0"
+  }
+}
