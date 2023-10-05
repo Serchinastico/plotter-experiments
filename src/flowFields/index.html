@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>Flow Fields</title>
+    <meta name="description" content="Flow Fields experiment" />
+    <meta name="author" content="Serchinastico" />
+
+    <link rel="stylesheet" href="tachyons.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="flowField.js"></script>
+    <script src="chroma.min.js"></script>
+    <script src="noise.js"></script>
+  </head>
+
+  <body>
+    <canvas id="canvas"></canvas>
+
+    <div
+      class="absolute left-0 top-0 flex flex-column bg-white ba br4 b--black ma2"
+    >
+      <img
+        id="minimize"
+        class="self-end ma3 grow pointer"
+        width="24"
+        src="minimize.svg"
+      />
+      <form id="form" class="flex flex-column pb4 ph4">
+        <label for="max-steps" class="f6 b db mb2">Max. Steps</label>
+        <input
+          id="max-steps"
+          class="br2 ba"
+          placeholder="Max. Steps"
+          type="number"
+          aria-label="Max. Steps"
+          value="1000"
+        />
+        <small id="name-desc" class="f6 black-60 db mt1"
+          >Use 0 if you don't want it to stop</small
+        >
+
+        <label for="num-points" class="f6 b db mb2 mt3"># Points</label>
+        <input
+          id="num-points"
+          class="br2 ba"
+          placeholder="# Points"
+          type="number"
+          aria-label="# Points"
+          value="1000"
+        />
+
+        <label for="force" class="f6 b db mb2 mt3">Force</label>
+        <input
+          id="force"
+          class="br2 ba"
+          placeholder="Force"
+          type="number"
+          aria-label="Force"
+          value="2.5"
+        />
+
+        <label for="force-friction" class="f6 b db mb2 mt3"
+          >Force Friction</label
+        >
+        <input
+          id="force-friction"
+          class="br2 ba"
+          placeholder="Force Friction"
+          type="number"
+          aria-label="Force Friction"
+          value="0.0035"
+        />
+        <small id="name-desc" class="f6 black-60 db mt1"
+          >If this value is above 0, it will reduce the initial force</small
+        >
+
+        <label for="friction" class="f6 b db mb2 mt3">Friction</label>
+        <input
+          id="friction"
+          class="br2 ba"
+          placeholder="Friction"
+          type="number"
+          aria-label="Friction"
+          value="0.04"
+        />
+
+        <label for="pen-width" class="f6 b db mb2 mt3">Pen Width</label>
+        <input
+          id="pen-width"
+          class="br2 ba"
+          placeholder="Pen Width"
+          type="number"
+          aria-label="Pen Width"
+          value="0.5"
+        />
+
+        <button
+          id="restart"
+          class="f6 link dim br3 ph3 pv2 mb2 dib white bg-black mt4"
+          type="button"
+        >
+          Restart
+        </button>
+      </form>
+    </div>
+  </body>
+</html>
