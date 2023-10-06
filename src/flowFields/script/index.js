@@ -4,10 +4,6 @@
 
 import { form } from "./form";
 
-const isCloseTo = (a, b, delta) => {
-  return Math.abs(a - b) <= delta;
-};
-
 const fillPoints = (points, count) => {
   points.splice(0, points.length);
 
@@ -75,7 +71,6 @@ const main = () => {
     flowContext.strokeStyle = previousStrokeStyle;
   };
 
-  // renderFlow();
   const toggleFlowVisibilityTurnOnIcon = document.querySelector(
     "#toggle-flow-visibility #turn-on"
   );
@@ -108,17 +103,6 @@ const main = () => {
        */
       const value = f.getConfig().flowFieldFn(point.x, point.y);
       context.strokeStyle = currentColor;
-
-      //   const vx = window.innerWidth / 2 - point.x;
-      //   const vy = window.innerHeight / 2 - point.y;
-      //   const distToCenter = Math.sqrt(vx * vx + vy * vy);
-      //   if (Math.round(distToCenter) % 200 < 100) {
-      //     context.strokeStyle = gradientFunction(1 - step / maxSteps);
-      //     // point.vx = -2 * point.vx;
-      //     // point.vy = -2 * point.vy;
-      //   } else {
-      //     context.strokeStyle = currentColor;
-      //   }
 
       point.vx += Math.cos(value) * f.getConfig().force;
       point.vy += Math.sin(value) * f.getConfig().force;
